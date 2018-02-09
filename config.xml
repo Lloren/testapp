@@ -1,0 +1,76 @@
+<widget	xmlns				= "http://www.w3.org/ns/widgets"
+				xmlns:gap		= "http://phonegap.com/ns/1.0"
+				xmlns:android	= "http://schemas.android.com/apk/res/android"
+				id					= "100"
+				version			= "1.0.0">
+	<name>Test App</name>
+	<description>
+		Test App
+	</description>
+	<author email="support@2dio.com" href="http://2dio.com">
+		2Dio, Inc.
+	</author>
+	<content src="index.html" />
+	<access origin="*" />
+	<allow-navigation href="*" />
+
+	<platform name="ios" />
+	<platform name="android" />
+	<!--<platform name="winphone" />-->
+
+	<preference name="phonegap-version" value="cli-7.1.0" />
+	<preference name="android-build-tool" value="gradle" />
+
+	<preference name="android-minSdkVersion" value="16" />
+	<preference name="deployment-target" value="8.0" />
+
+	<preference name="orientation" value="portrait" />
+	<config-file platform="ios" parent="UISupportedInterfaceOrientations" mode="replace">
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+		</array>
+	</config-file>
+
+	<preference name="fullscreen" value="false" />
+
+	<preference name="target-device" value="universal" />
+	<preference name="detect-data-types" value="false" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="KeepRunning" value="true" />
+
+	<preference name="webviewbounce" value="false" />
+	<preference name="UIWebViewBounce" value="false" />
+	<preference name="DisallowOverscroll" value="true" />
+
+	<preference name="BackgroundColor" value="0xff333333"/>
+	<preference name="HideKeyboardFormAccessoryBar" value="true" />
+	<preference name="EnableViewportScale" value="true"/>
+
+	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="StatusBarBackgroundColor" value="#000000" />
+	<preference name="StatusBarStyle" value="lightcontent" />
+
+	<preference name="SplashScreen" value="splash" />
+	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="AutoHideSplashScreen" value="false" />
+
+
+	<plugin name="cordova-plugin-geolocation" source="npm" />
+
+
+	<feature name="http://api.phonegap.com/1.0/network" />
+
+	<feature name="StatusBar">
+		<param name="ios-package" value="CDVStatusBar" onload="true" />
+	</feature>
+
+	<!-- Keyboard setting for Android -->
+	<config-file platform="android" parent="/manifest/application">
+			<activity android:windowSoftInputMode="adjustPan" />
+	</config-file>
+
+	<!-- Default Icon/Splash -->
+	<icon src="icon.png" />
+	<splash src="splash.png" /> <!-- ??? *Breaks iOS build/preferences sometimes ??? -->
+
+</widget>
