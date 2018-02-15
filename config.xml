@@ -55,7 +55,7 @@
 	<preference name="SplashScreenDelay" value="10000" />
 	<preference name="AutoHideSplashScreen" value="false" />
 
-	<preference name="GEOLOCATION_USAGE_DESCRIPTION" default="is this working?" />
+	<preference name="GEOLOCATION_USAGE_DESCRIPTION" value="is this working?" />
 
 	<plugin name="cordova-plugin-geolocation" source="npm" spec="2.4.3" />
 
