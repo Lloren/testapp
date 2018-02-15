@@ -1,8 +1,9 @@
 <widget	xmlns				= "http://www.w3.org/ns/widgets"
-				xmlns:gap		= "http://phonegap.com/ns/1.0"
-				xmlns:android	= "http://schemas.android.com/apk/res/android"
-				id					= "100"
-				version			= "1.0.0">
+		xmlns:gap			= "http://phonegap.com/ns/1.0"
+		xmlns:android		= "http://schemas.android.com/apk/res/android"
+		id					= "test.notomono.onnix.net"
+		android-versionCode	="100"
+		version				= "1.0.0">
 	<name>Test App</name>
 	<description>
 		Test App
@@ -54,8 +55,9 @@
 	<preference name="SplashScreenDelay" value="10000" />
 	<preference name="AutoHideSplashScreen" value="false" />
 
+	<preference name="GEOLOCATION_USAGE_DESCRIPTION" default="is this working?" />
 
-	<plugin name="cordova-plugin-geolocation" source="npm" />
+	<plugin name="cordova-plugin-geolocation" source="npm" spec="2.4.3" />
 
 
 	<feature name="http://api.phonegap.com/1.0/network" />
